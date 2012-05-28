@@ -31,14 +31,31 @@ Default layout, loads most of the pages
 -->
 
     <default>
+		<reference name="top.links">
+			<block type="cms/block" name="em0039_header_support">
+				<action method="setBlockId"><block_id>em0039_header_support</block_id></action>
+			</block>
+		</reference>
+		<reference name="header">
+			<block type="cms/block" name="em0039_megamenu" before="-">
+				<action method="setBlockId"><block_id>em0039_megamenu</block_id></action>
+			</block>
+		</reference>
         <reference name="footer">
-            <block type="cms/block" name="cms_footer_links" before="footer_links">
-                <!--
-                    The content of this block is taken from the database by its block_id.
-                    You can manage it in admin CMS -> Static Blocks
-                -->
-                <action method="setBlockId"><block_id>footer_links</block_id></action>
-            </block>
+			<block type="cms/block" name="em0039_footer_news" before="-">
+				<action method="setBlockId"><block_id>em0039_footer_news</block_id></action>
+			</block>
+			<block type="cms/block" name="em0051_footer_block_news">
+				<action method="setBlockId"><block_id>em0039_footer_links</block_id></action>
+			</block>
+			<block type="cms/block" name="em0039_footer_social_network">
+				<action method="setBlockId"><block_id>em0039_footer_social_network</block_id></action>
+			</block>
+			<block type="core/template" name="footer_slideshow" template="page/html/slideshow_footer.phtml">
+				<block type="cms/block" name="em0039_footer_social_network">
+					<action method="setBlockId"><block_id>em0039_footer_social_network</block_id></action>
+				</block>
+			</block>
         </reference>
     </default>
     
@@ -56,16 +73,18 @@ Default layout, loads most of the pages
 
     <cms_index_index translate="label">
         <label>CMS Home Page</label>
-		<reference name="top-main-container">
+		<reference name="root">
         	<!-- Top Content Main Slideshow -->
 			<block type="cms/block" name="em0039_main_slideshow" before="-">
 				<action method="setBlockId"><block_id>em0039_main_slideshow</block_id></action>
 			</block>
 		</reference>
 		<reference name="content">
-        	<!-- Top Content Main Slideshow -->
-			<block type="cms/block" name="em0039_main_slideshow" before="-">
-				<action method="setBlockId"><block_id>em0039_main_slideshow</block_id></action>
+			<block type="cms/block" name="em0039_home_most_popular" >
+				<action method="setBlockId"><block_id>em0039_home_most_popular</block_id></action>
+			</block>
+			<block type="cms/block" name="em0039_new_product" after="em0039_home_most_popular">
+				<action method="setBlockId"><block_id>em0039_new_product</block_id></action>
 			</block>
 		</reference>
     </cms_index_index>
