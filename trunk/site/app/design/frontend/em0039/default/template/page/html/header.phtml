@@ -37,9 +37,25 @@
 				<?php echo $this->getChildHtml('topMenu'); ?>
 			<?php endif ?>
 			<div class="quick-access">
-				<?php echo $this->getChildHtml('topSearch') ?>
 				<?php echo $this->getChildHtml('topLinks') ?>
-				<?php echo $this->getChildHtml('store_language') ?>
+				<?php echo $this->getChildHtml('topSearch') ?>
+				
+				
+				<!-- AjaxCart -->
+				<?php 
+				$_cartQty = Mage::getSingleton('checkout/cart')->getSummaryQty()?Mage::getSingleton('checkout/cart')->getSummaryQty():'0'; ?>
+				<?php 
+				$_subtotals = Mage::getSingleton('checkout/cart')->getQuote()->getTotals();
+				$subtotal = $_subtotals["subtotal"]->getValue();
+				?>
+				<div class="div_link-cart">
+					<div class="div_link-cart_inner">
+						<?php echo $this->__('<a href="%s" id="topcartlink" class="top-link-cart"> <span>%s Item(s)</span> </a>', $this->getUrl('checkout/cart'), $_cartQty) ?>
+						<div id="top_cart_sidebar" style="display:none">
+							<?php echo $this->getChildHtml('cart_sidebar_top');?>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
