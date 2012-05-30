@@ -31,6 +31,11 @@
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<script type="text/javascript">
+//<![CDATA[
+	var urlSkinsite='<?php echo $this->getSKinUrl(); ?>';
+//]]>
+</script>
 <!--[if lt IE 7]>
 <script type="text/javascript">
 //<![CDATA[
@@ -43,3 +48,245 @@
 <?php echo $this->getChildHtml() ?>
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
+
+<script type="text/javascript">
+jQuery(function($) {
+
+ /*************** Cart *********************/
+ $('#top_cart_sidebar').hide();
+ $('#topcartlink')
+ .bind('mouseover', showMenu)
+ .bind('click', showMenu)
+ .bind('mouseout', hideMenu);
+ $('#top_cart_sidebar')
+ .bind('mouseover', showMenu)
+ .bind('click', showMenu)
+ .bind('mouseout', hideMenu);
+ var timeout = null;
+ 
+ function hideMenu() {
+ if (timeout)
+ clearTimeout(timeout);
+ timeout = setTimeout(function() {
+ timeout = null;
+ $('#top_cart_sidebar').slideUp();
+ $('#topcartlink').removeClass('over');
+ }, 200);
+ }
+
+ function showMenu() {
+ $('#contact-content').css('display','none');
+ $('div.block top_cart_sidebar').css('display','none');
+ $('#top-links').css('display','none');
+ $('#content_search').css('display','none');
+ $('#purch_content').css('display','none');
+ $('#link-account').removeClass('over');
+ $('#topcartlink').removeClass('over');
+ $('#contactus').removeClass('over');
+ $('#title_search').removeClass('over');
+ if (timeout)
+ clearTimeout(timeout);
+ timeout = setTimeout(function() {
+ timeout = null;
+ $('#top_cart_sidebar').slideDown();
+  $('#topcartlink').addClass('over');
+ }, 200);
+ }
+
+/*********** Top Links************/
+
+$('#top-links').hide(); 
+$('#top-links')
+ .bind('mouseover', showLinks)
+ .bind('click', showLinks)
+ .bind('mouseout', hideLinks);
+ 
+ $('#link-account')
+ .bind('mouseover', showLinks)
+ .bind('click', showLinks)
+ .bind('mouseout', hideLinks);
+ 
+ var timeout1 = null;
+ function hideLinks() {
+ if (timeout1)
+ clearTimeout(timeout1);
+ timeout1 = setTimeout(function() {
+ timeout1 = null;
+ $('#top-links').slideUp();
+ $('#link-account').removeClass('over');
+ }, 200);
+ }
+
+ function showLinks() {
+ $('#contact-content').css('display','none');
+ //$('div.block top-links').css('display','none');
+ $('#top_cart_sidebar').css('display','none');
+ //$('#content_search').css('display','none');
+ $('#purch_content').css('display','none');
+ //$('#link-account').removeClass('over');
+ $('#topcartlink').removeClass('over');
+ $('#contactus').removeClass('over');
+ $('#title_search').removeClass('over');
+ 
+ if (timeout1)
+ clearTimeout(timeout1);
+ timeout1 = setTimeout(function() {
+ timeout1 = null;
+ hideContactUs();
+ $('#top-links').slideDown();
+ $('#link-account').addClass('over');
+ }, 200);
+ }
+ 
+/*********** Top Search ************/
+ $('#content_search').hide();
+ $('#title_search')
+ .bind('mouseover', showSearch)
+ .bind('click', showSearch)
+ .bind('mouseout', hideSearch);
+ $('#content_search')
+ .bind('mouseover', showSearch)
+ .bind('click', showSearch)
+ .bind('mouseout', hideSearch);
+ var timeout = null;
+ 
+ function hideSearch() {
+ if (timeout)
+ clearTimeout(timeout);
+ timeout = setTimeout(function() {
+ timeout = null;
+ $('#content_search').slideUp();
+ $('#title_search').removeClass('over');
+ }, 200);
+ }
+
+ function showSearch() {
+ $('#contact-content').css('display','none');
+ $('#content_search').css('display','none');
+ $('#top-links').css('display','none');
+ $('#top_cart_sidebar').css('display','none');
+ $('#purch_content').css('display','none');
+ $('#link-account').removeClass('over');
+ $('#topcartlink').removeClass('over');
+ $('#contactus').removeClass('over');
+ $('#title_search').removeClass('over');
+ if (timeout)
+ clearTimeout(timeout);
+ timeout = setTimeout(function() {
+ timeout = null;
+ $('#content_search').slideDown();
+  $('#title_search').addClass('over');
+ }, 200);
+ }
+
+ 
+ 
+ 
+ /*************** Contact us *********************/
+ $('#contact-content').hide(); 
+ $('#contact-content')
+ .bind('mouseover', showContactUs)
+ .bind('click', showContactUs)
+ .bind('mouseout', hideContactUs);
+ 
+ $('#contactus')
+ .bind('mouseover', showContactUs)
+ .bind('click', showContactUs)
+ .bind('mouseout', hideContactUs);
+ 
+ var timeout1 = null;
+ function hideContactUs() {
+ if (timeout1)
+ clearTimeout(timeout1);
+ timeout1 = setTimeout(function() {
+ timeout1 = null;
+ $('#contact-content').slideUp();
+  $('#contactus').removeClass('over');
+ }, 200);
+ }
+
+ function showContactUs() {
+ $('#top_cart_sidebar').css('display','none');
+ $('div.block contact-content').css('display','none');
+ $('#top-links').css('display','none');
+ $('#content_search').css('display','none');
+ $('#purch_content').css('display','none');
+ $('#link-account').removeClass('over');
+ $('#topcartlink').removeClass('over');
+ //$('#contactus').removeClass('over');
+ $('#title_search').removeClass('over');
+ 
+ if (timeout1)
+ clearTimeout(timeout1);
+ timeout1 = setTimeout(function() {
+ $('#contact-content').slideDown(); 
+ $('#contactus').addClass('over');
+ }, 200);
+ }
+ 
+  /*************** purchase *********************/
+
+$('#purch_content').hide();
+$('#purch_content')
+ .bind('mouseover', showPurch)
+ .bind('click', showPurch)
+ .bind('mouseout', hidePurch);
+ 
+$('#purch')
+ .bind('mouseover', showPurch)
+ .bind('click', showPurch)
+ .bind('mouseout', hidePurch);
+ 
+var timeout1 = null;
+ function hidePurch() {
+ if (timeout1)
+ clearTimeout(timeout1);
+ timeout1 = setTimeout(function() {
+ timeout1 = null;
+ $('#purch_content').slideUp();
+  $('#purch').removeClass('over');
+ }, 200);
+ }
+ 
+ function showPurch() {
+ $('#contact-content').css('display','none');
+ $('div.block top_cart_sidebar').css('display','none');
+ $('#top-links').css('display','none');
+ $('#content_search').css('display','none');
+ $('#purch_content').css('display','none');
+ $('#link-account').removeClass('over');
+ $('#topcartlink').removeClass('over');
+ $('#contactus').removeClass('over');
+ $('#title_search').removeClass('over');
+ if (timeout1)
+ clearTimeout(timeout1);
+ timeout1 = setTimeout(function() {
+ $('#purch_content').slideDown(); 
+ $('#purch').addClass('over');
+ }, 200);
+ }
+ 
+  
+  $("div.cate_icon").mouseenter(function() {  
+    $(this).find("a.cate_link").show(1000);
+  }).mouseleave(function() {
+    $(this).find("a.cate_link").hide('fast')
+  });
+  
+	$('.homepage_category .cate_button').hide();
+	$('.homepage_category').each(function() {
+	
+		$(this).children('.cate_icon').hover(
+		  function () {
+			$(this).children('.cate_button').show('slow');
+		  }, 
+		  function () {
+			$(this).children('.cate_button').hide();
+		  }
+		); 
+	 
+	});
+
+
+}); 
+</script>

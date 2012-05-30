@@ -40,6 +40,15 @@ Default layout, loads most of the pages
 			<block type="cms/block" name="em0039_megamenu" before="-">
 				<action method="setBlockId"><block_id>em0039_megamenu</block_id></action>
 			</block>
+			
+			<block type="checkout/cart_sidebar" name="cart_sidebar_top" as="cart_sidebar_top" template="checkout/cart/sidebar.phtml">
+				<action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+				<action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+				<action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+				<block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+					<label>Shopping Cart Sidebar Extra Actions</label>
+				</block>
+			</block>	
 		</reference>
         <reference name="footer">
 			<block type="cms/block" name="em0039_footer_news" before="-">
@@ -83,7 +92,10 @@ Default layout, loads most of the pages
 			<block type="cms/block" name="em0039_home_most_popular" >
 				<action method="setBlockId"><block_id>em0039_home_most_popular</block_id></action>
 			</block>
-			<block type="cms/block" name="em0039_new_product" after="em0039_home_most_popular">
+			<block type="cms/block" name="em0039_fresh" after="em0039_home_most_popular">
+				<action method="setBlockId"><block_id>em0039_fresh</block_id></action>
+			</block>
+			<block type="cms/block" name="em0039_new_product" after="em0039_fresh">
 				<action method="setBlockId"><block_id>em0039_new_product</block_id></action>
 			</block>
 		</reference>
