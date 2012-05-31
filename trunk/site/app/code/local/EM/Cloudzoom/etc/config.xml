@@ -73,10 +73,10 @@
 	    		<tint_opacity>50</tint_opacity>
 	    		<big_image_width>800</big_image_width>
 	    		<big_image_height>800</big_image_height>
-				<fix_width>520</fix_width>
+				<fix_width>260</fix_width>
 				<fix_height></fix_height>
-				<fix_thumb_width>97</fix_thumb_width>
-				<fix_thumb_height>73</fix_thumb_height>
+				<fix_thumb_width>78</fix_thumb_width>
+				<fix_thumb_height>87</fix_thumb_height>
 	    	</general>
     	</em_cloudzoom>
     </default>
