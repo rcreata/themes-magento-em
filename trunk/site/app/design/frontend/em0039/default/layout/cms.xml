@@ -87,9 +87,7 @@ Default layout, loads most of the pages
 			<block type="cms/block" name="em0039_main_slideshow" before="-">
 				<action method="setBlockId"><block_id>em0039_main_slideshow</block_id></action>
 			</block>
-		</reference>
-		<reference name="content">
-			<block type="cms/block" name="em0039_home_most_popular" >
+			<block type="cms/block" name="em0039_home_most_popular" before="-">
 				<action method="setBlockId"><block_id>em0039_home_most_popular</block_id></action>
 			</block>
 			<block type="cms/block" name="em0039_fresh" after="em0039_home_most_popular">
@@ -98,6 +96,8 @@ Default layout, loads most of the pages
 			<block type="cms/block" name="em0039_new_product" after="em0039_fresh">
 				<action method="setBlockId"><block_id>em0039_new_product</block_id></action>
 			</block>
+		</reference>
+		<reference name="content">
 		</reference>
     </cms_index_index>
 

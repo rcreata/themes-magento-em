@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <EM_EM0039Settings>
+            <active>true</active>
+            <codePool>community</codePool>
+        </EM_EM0039Settings>
+    </modules>
+</config> 
