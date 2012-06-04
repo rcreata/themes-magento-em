@@ -41,7 +41,7 @@ Default layout, loads most of the pages
                 <action method="addCheckoutLink"></action>
             </block-->
         </reference>
-        <reference name="right">
+        <!--reference name="right">
             <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml">
                 <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
                 <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
@@ -50,7 +50,7 @@ Default layout, loads most of the pages
                     <label>Shopping Cart Sidebar Extra Actions</label>
                 </block>
             </block>
-        </reference>
+        </reference-->
     </default>
 
     <checkout_cart_index translate="label">
@@ -421,6 +421,9 @@ One page checkout order review block
         </reference>
         <reference name="content">
             <block type="checkout/onepage_success" name="checkout.success" template="checkout/success.phtml"/>
+        </reference>
+        <reference name="right">            
+              <block type="sales/reorder_sidebar" name="sale.reorder.sidebar.right" as="reorder.right" before="-" template="sales/reorder/sidebar.phtml"/>
         </reference>
     </checkout_onepage_success>
     <checkout_onepage_failure translate="label">

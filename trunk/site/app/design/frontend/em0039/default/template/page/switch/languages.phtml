@@ -36,8 +36,8 @@
     <!--label><?php echo $this->__('Your Language:') ?></label-->
 	<ul>
     <?php foreach ($this->getStores() as $_lang): ?>
-        <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? ' selected="selected"' : '' ?>
-        <a href="<?php echo $_lang->getCurrentUrl() ?>"><?php echo $this->htmlEscape($_lang->getName()) ?></a>
+        <li<?php echo ($_lang->getId() == $this->getCurrentStoreId()) ? ' class="active"' : '' ?>>
+        <a href="<?php echo $_lang->getCurrentUrl() ?>"><?php echo $this->htmlEscape($_lang->getName()) ?></a></li>
     <?php endforeach; ?>
     </ul>
 
