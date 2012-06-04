@@ -31,10 +31,16 @@
  * @see Mage_Catalog_Block_Layer_View
  */
 ?>
+<?php
+    $obj = new Mage_Catalog_Block_Navigation();
+
+    $current_cat    = $obj->getCurrentCategory();
+?>
+
 <?php if($this->canShowBlock()): ?>
 <div class="block block-layered-nav">
     <div class="block-title">
-        <strong><span><?php echo $this->__('Shop for:') ?></span></strong>
+        <strong><span><?php echo $this->__('Shop for: '); echo $current_cat->getName(); ?></span></strong>
     </div>
     <div class="block-content">
         <?php echo $this->getStateHtml() ?>

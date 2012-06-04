@@ -50,20 +50,23 @@ Default layout, loads most of the pages
 				</block>
 			</block>	
 		</reference>
-        <reference name="footer">
-			<block type="cms/block" name="em0039_footer_news" before="-">
+        <reference name="root">
+			<block type="cms/block" name="em0039_footer_news" before="">
 				<action method="setBlockId"><block_id>em0039_footer_news</block_id></action>
 			</block>
-			<block type="cms/block" name="em0051_footer_block_news">
+			<block type="cms/block" name="em0039_footer_picture" after="left.newsletter">
+				<action method="setBlockId"><block_id>em0039_footer_picture</block_id></action>
+			</block>
+			<block type="cms/block" name="em0039_footer_links" after="-">
 				<action method="setBlockId"><block_id>em0039_footer_links</block_id></action>
 			</block>
-			<block type="cms/block" name="em0039_footer_social_network">
+		</reference>
+		<reference name="footer-main-container">
+			<block type="cms/block" name="em0039_footer_social_network" after="left.newsletter">
 				<action method="setBlockId"><block_id>em0039_footer_social_network</block_id></action>
 			</block>
-			<block type="core/template" name="footer_slideshow" template="page/html/slideshow_footer.phtml">
-				<block type="cms/block" name="em0039_footer_social_network">
-					<action method="setBlockId"><block_id>em0039_footer_social_network</block_id></action>
-				</block>
+			<block type="cms/block" name="em0039_footer_contact" after="em0039_footer_social_network">
+				<action method="setBlockId"><block_id>em0039_footer_contact</block_id></action>
 			</block>
         </reference>
     </default>
