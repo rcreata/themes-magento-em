@@ -65,7 +65,7 @@ TABLE OF CONTENTS
 	background:url("img/drop.png") no-repeat right 8px;
 }
 .menu li:hover .drop {
-	padding-right:21px;
+	/* padding-right:21px; */
 	background:url("img/drop.png") no-repeat right 7px;
 }
 .menu li:hover div a {

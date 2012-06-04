@@ -131,11 +131,11 @@
 	<default>
 		<em0039>
 			<image>
-				<grid_thumb_width>135</grid_thumb_width>
-				<grid_thumb_height>135</grid_thumb_height>
+				<grid_thumb_width>200</grid_thumb_width>
+				<grid_thumb_height>200</grid_thumb_height>
 				<grid_thumb_bgcolor>#FFF</grid_thumb_bgcolor>
-				<listing_thumb_width>135</listing_thumb_width>
-				<listing_thumb_height>135</listing_thumb_height>
+				<listing_thumb_width>200</listing_thumb_width>
+				<listing_thumb_height>200</listing_thumb_height>
                 <listing_thumb_bgcolor>#FFF</listing_thumb_bgcolor>
 				<base_image_width>256</base_image_width>
                 <base_image_height>256</base_image_height>
@@ -161,7 +161,7 @@
 				<cat_one_column>5</cat_one_column>
 				<cat_two_columns>4</cat_two_columns>
 				<cat_three_columns>3</cat_three_columns>
-				<default_cat_column_count>2</default_cat_column_count>
+				<default_cat_column_count>4</default_cat_column_count>
 			</image>
 		</em0039>
 	</default>

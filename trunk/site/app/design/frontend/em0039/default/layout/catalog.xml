@@ -53,12 +53,12 @@ Default layout, loads most of the pages
             </block>
         </reference>
         <reference name="right">
-            <block type="catalog/layer_view" name="catalog.leftnav" before="-" template="catalog/layer/view.phtml"/>
+            <!--block type="catalog/layer_view" name="catalog.leftnav" before="-" template="catalog/layer/view.phtml"/-->
             <!--block type="catalog/product_compare_sidebar" before="cart_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/-->
-            <block type="core/template" name="right.permanent.callout" template="callouts/right_col.phtml">
+            <!--block type="core/template" name="right.permanent.callout" template="callouts/right_col.phtml">
                 <action method="setImgSrc"><src>images/media/col_right_callout.jpg</src></action>
                 <action method="setImgAlt" translate="alt" module="catalog"><alt>Keep your eyes open for our special Back to School items and save A LOT!</alt></action>
-            </block>
+            </block-->
         </reference>
         <!--reference name="footer_links">
             <action method="addLink" translate="label title" module="catalog" ifconfig="catalog/seo/site_map"><label>Site Map</label><url helper="catalog/map/getCategoryUrl" /><title>Site Map</title></action>
@@ -73,6 +73,11 @@ Category default layout
 
     <catalog_category_default translate="label">
         <label>Catalog Category (Non-Anchor)</label>
+        <reference name="content">            
+            <block type="cms/block" name="em0039_fresh_category" after="em0039_home_most_popular">
+                <action method="setBlockId"><block_id>em0039_fresh_category</block_id></action>
+            </block>
+        </reference>
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
 		</reference>
@@ -111,12 +116,17 @@ Category layered navigation layout
 -->
 
     <catalog_category_layered translate="label">
-        <label>Catalog Category (Anchor)</label>		
+        <label>Catalog Category (Anchor)</label>
+        <reference name="content">            
+            <block type="cms/block" name="em0039_fresh_category" after="em0039_home_most_popular">
+                <action method="setBlockId"><block_id>em0039_fresh_category</block_id></action>
+            </block>
+        </reference>		
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-right.phtml</template></action>
 		</reference>
-        <reference name="left">
-            <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml"/>
+        <reference name="right">
+            <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml" before="-"/>
         </reference>
         <reference name="content">
             <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
@@ -200,6 +210,15 @@ Product view
                 <action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short.phtml</template></action>
                 <action method="addReviewSummaryTemplate"><type>...</type><template>...</template></action>
                 -->
+                
+                <block type="review/product_view_list" name="product.info.product_additional_data" as="product_additional_data_review" template="review/product/view/list.phtml" >
+                    <block type="review/form" name="product.review.form" as="review_form">
+                        <block type="page/html_wrapper" name="product.review.form.fields.before" as="form_fields_before" translate="label">
+                            <label>Review Form Fields Before</label>
+                            <action method="setMayBeInvisible"><value>1</value></action>
+                        </block>
+                    </block>
+                </block>
                 <block type="catalog/product_view_media" name="product.info.media" as="media" template="catalog/product/view/media.phtml"/>
                 <block type="core/text_list" name="alert.urls" as="alert_urls" translate="label">
                     <label>Alert Urls</label>
