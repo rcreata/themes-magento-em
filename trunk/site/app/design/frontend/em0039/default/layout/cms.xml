@@ -57,9 +57,6 @@ Default layout, loads most of the pages
 			<block type="cms/block" name="em0039_footer_picture" after="left.newsletter">
 				<action method="setBlockId"><block_id>em0039_footer_picture</block_id></action>
 			</block>
-			<block type="cms/block" name="em0039_footer_links" after="-">
-				<action method="setBlockId"><block_id>em0039_footer_links</block_id></action>
-			</block>
 		</reference>
 		<reference name="footer-main-container">
 			<block type="cms/block" name="em0039_footer_social_network" after="left.newsletter">
@@ -67,6 +64,9 @@ Default layout, loads most of the pages
 			</block>
 			<block type="cms/block" name="em0039_footer_contact" after="em0039_footer_social_network">
 				<action method="setBlockId"><block_id>em0039_footer_contact</block_id></action>
+			</block>
+			<block type="cms/block" name="em0039_footer_links" after="-">
+				<action method="setBlockId"><block_id>em0039_footer_links</block_id></action>
 			</block>
         </reference>
     </default>

@@ -2060,9 +2060,9 @@ body {
 	clear: both;
 	overflow: hidden;
 	background: url(../images/footer_bg.png) no-repeat 0 0 transparent;
-	height: 252px;
+	height: 259px;
 	width:740px;
-	margin: 0 auto;
+	margin: 0 auto -25px;
 }
 
 .footer-main-container > * {
@@ -2070,8 +2070,8 @@ body {
 	width: 238px;
 	border-left: 2px dashed #c8c8c8;
 	border-right: 2px dashed #c8c8c8;
-	margin: 0 2px;
-	height: 234px;
+	margin: 0 2px 5px;
+	height: 197px;
 }
 
 .footer-main-container .footer-newsletter-picture {
@@ -2198,6 +2198,76 @@ button.button span span {
 	color: #3d2817;
 }
 
+.footer-main-container > ul {
+	padding: 7px 0;
+	height: 8px;
+	line-height: 8px;
+	width: 100%;
+	background:url(../images/footer-link_bg.jpg) repeat-x 0 0 transparent;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 11px;
+	height: 22px;
+	border: none;
+	clear: both;
+	overflow: hidden;
+}
+
+.footer-main-container > ul li {
+	display: inline;
+	padding: 0 8px 0 7px;
+	border-left: 1px solid #fff;
+}
+
+.footer-main-container > ul a {
+	font-size: 11px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer-main-container > ul li:first-child {
+	border-left: none;
+	padding-left: 1px;
+}
+
+.footer {
+	padding: 0;
+	width: 740px;
+	padding-left: 220px;
+}
+
+.form-language{
+	float: left;
+}
+
+.footer address {
+	float: right;
+	color: #3d2817;
+}
+
+.footer address a {
+	color: #3d2817;
+}
+
+.form-language a {
+	color: #3d2817;
+}
+
+.form-language li.active a {
+	color: #c05718;
+}
+
+.category-products > .toolbar .pager, .category-products > .toolbar .pages {
+	display: none;
+}
+
+.toolbar .sorter {
+	background: none transparent;
+}
+
+.toolbar .view-mode label {
+	float: left;
+}
 
 .header .form-search  #content_search { }
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; display: none; }
