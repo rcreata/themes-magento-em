@@ -3,12 +3,9 @@
 	
     $_helper = $this->helper('catalog/output');	
     $em0039 = new EM_EM0039Settings_EM0039Settings();
-    $bg = $em0039->get_listing_thumb_bgcolor();
-    $w = $em0039->get_listing_thumb_width();
-    $h = $em0039->get_listing_thumb_height();
-    $bgg =  $em0039->get_grid_thumb_bgcolor() ;
-    $wg = $em0039->get_grid_thumb_width() ;
-    $hg = $em0039->get_grid_thumb_height() ;
+    $bg = $em0039->get_mostpopular_bgcolor();
+    $w = $em0039->get_mostpopular_width();
+    $h = $em0039->get_mostpopular_height();
 
 ?>
 <?php if(count($data) == 0): ?>

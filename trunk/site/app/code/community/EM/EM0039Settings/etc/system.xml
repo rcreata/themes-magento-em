@@ -236,18 +236,42 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </widget_bgcolor>
-						<tab_width translate="label comment">
-                            <label>Thumbnail Width on Tab</label>
+                        <mostpopular_width translate="label">
+                            <label>Thumbnail Width on Mostpopular</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>25</sort_order>
                              <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mostpopular_width>
+                        <mostpopular_height translate="label comment">
+                            <label>Thumnail Height on Mostpopular</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mostpopular_height>
+                        <mostpopular_bgcolor translate="label">
+                            <label>Thumbnail Background color on Mostpopular</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>27</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mostpopular_bgcolor>
+						<tab_width translate="label comment">
+                            <label>Thumbnail Width on Tab</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </tab_width>
 						<tab_height translate="label">
                             <label>Thumbnail Height on Tab</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>39</sort_order>
+                            <sort_order>29</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -255,7 +279,7 @@
                         <tab_bgcolor translate="label comment">
                             <label>Thumbnail Background color on Tab</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>27</sort_order>
+                            <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -263,7 +287,7 @@
 						<cat_one_column translate="label comment">
                             <label>The number of products per row (grid mode at Category page) with one column layout</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>25</sort_order>
+                            <sort_order>31</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -271,7 +295,7 @@
 						<cat_two_columns translate="label comment">
                             <label>The number of products per row (grid mode at Category page) with two columns layout</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>39</sort_order>
+                            <sort_order>32</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -279,7 +303,7 @@
 						<cat_three_columns translate="label comment">
                             <label>The number of products per row (grid mode at Category page) with three columns layout</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>27</sort_order>
+                            <sort_order>33</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
