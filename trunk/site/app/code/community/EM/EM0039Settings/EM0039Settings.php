@@ -97,6 +97,18 @@ class EM_EM0039Settings_EM0039Settings
 	{
 		return Mage::getStoreConfig('em0039/image/widget_bgcolor');
 	}
+	public function get_mostpopular_width()
+	{
+		return Mage::getStoreConfig('em0039/image/mostpopular_width');
+	}
+	public function get_mostpopular_height()
+	{
+		return Mage::getStoreConfig('em0039/image/mostpopular_height');
+	}
+	public function get_mostpopular_bgcolor()
+	{
+		return Mage::getStoreConfig('em0039/image/mostpopular_bgcolor');
+	}
 	public function get_tab_width()
 	{
 		return Mage::getStoreConfig('em0039/image/tab_width');

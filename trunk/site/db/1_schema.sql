@@ -91,7 +91,7 @@ CREATE TABLE `adminnotification_inbox` (
   KEY `IDX_ADMINNOTIFICATION_INBOX_SEVERITY` (`severity`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_READ` (`is_read`),
   KEY `IDX_ADMINNOTIFICATION_INBOX_IS_REMOVE` (`is_remove`)
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox';
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `api2_acl_attribute`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -2453,7 +2453,7 @@ CREATE TABLE `core_config_data` (
   `value` text COMMENT 'Config Value',
   PRIMARY KEY (`config_id`),
   UNIQUE KEY `UNQ_CORE_CONFIG_DATA_SCOPE_SCOPE_ID_PATH` (`scope`,`scope_id`,`path`)
-) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=utf8 COMMENT='Config Data';
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8 COMMENT='Config Data';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `core_email_template`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -3799,7 +3799,7 @@ CREATE TABLE `log_customer` (
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   PRIMARY KEY (`log_id`),
   KEY `IDX_LOG_CUSTOMER_VISITOR_ID` (`visitor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Log Customers Table';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Log Customers Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `log_quote`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -3855,7 +3855,7 @@ CREATE TABLE `log_url_info` (
   `url` varchar(255) NOT NULL DEFAULT '' COMMENT 'URL',
   `referer` varchar(255) DEFAULT NULL COMMENT 'Referrer',
   PRIMARY KEY (`url_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23816 DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table';
+) ENGINE=InnoDB AUTO_INCREMENT=24661 DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `log_visitor`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -3868,7 +3868,7 @@ CREATE TABLE `log_visitor` (
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Last URL ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   PRIMARY KEY (`visitor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table';
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `log_visitor_info`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -4401,7 +4401,7 @@ CREATE TABLE `report_event` (
   KEY `IDX_REPORT_EVENT_STORE_ID` (`store_id`),
   CONSTRAINT `FK_REPORT_EVENT_EVENT_TYPE_ID_REPORT_EVENT_TYPES_EVENT_TYPE_ID` FOREIGN KEY (`event_type_id`) REFERENCES `report_event_types` (`event_type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_REPORT_EVENT_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='Reports Event Table';
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COMMENT='Reports Event Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `report_event_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -4492,7 +4492,7 @@ CREATE TABLE `report_viewed_product_index` (
   CONSTRAINT `FK_REPORT_VIEWED_PRD_IDX_CSTR_ID_CSTR_ENTT_ENTT_ID` FOREIGN KEY (`customer_id`) REFERENCES `customer_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_REPORT_VIEWED_PRD_IDX_PRD_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`product_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_REPORT_VIEWED_PRODUCT_INDEX_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COMMENT='Reports Viewed Product Index Table';
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COMMENT='Reports Viewed Product Index Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5151,7 +5151,7 @@ CREATE TABLE `sales_flat_order` (
   KEY `IDX_SALES_FLAT_ORDER_UPDATED_AT` (`updated_at`),
   CONSTRAINT `FK_SALES_FLAT_ORDER_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID` FOREIGN KEY (`customer_id`) REFERENCES `customer_entity` (`entity_id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `FK_SALES_FLAT_ORDER_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_order_address`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5189,7 +5189,7 @@ CREATE TABLE `sales_flat_order_address` (
   PRIMARY KEY (`entity_id`),
   KEY `IDX_SALES_FLAT_ORDER_ADDRESS_PARENT_ID` (`parent_id`),
   CONSTRAINT `FK_SALES_FLAT_ORDER_ADDRESS_PARENT_ID_SALES_FLAT_ORDER_ENTITY_ID` FOREIGN KEY (`parent_id`) REFERENCES `sales_flat_order` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Address';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Address';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_order_grid`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5319,7 +5319,7 @@ CREATE TABLE `sales_flat_order_item` (
   KEY `IDX_SALES_FLAT_ORDER_ITEM_STORE_ID` (`store_id`),
   CONSTRAINT `FK_SALES_FLAT_ORDER_ITEM_ORDER_ID_SALES_FLAT_ORDER_ENTITY_ID` FOREIGN KEY (`order_id`) REFERENCES `sales_flat_order` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_SALES_FLAT_ORDER_ITEM_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Item';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Item';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_order_payment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5393,7 +5393,7 @@ CREATE TABLE `sales_flat_order_payment` (
   PRIMARY KEY (`entity_id`),
   KEY `IDX_SALES_FLAT_ORDER_PAYMENT_PARENT_ID` (`parent_id`),
   CONSTRAINT `FK_SALES_FLAT_ORDER_PAYMENT_PARENT_ID_SALES_FLAT_ORDER_ENTITY_ID` FOREIGN KEY (`parent_id`) REFERENCES `sales_flat_order` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Payment';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Payment';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_order_status_history`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5411,7 +5411,7 @@ CREATE TABLE `sales_flat_order_status_history` (
   KEY `IDX_SALES_FLAT_ORDER_STATUS_HISTORY_PARENT_ID` (`parent_id`),
   KEY `IDX_SALES_FLAT_ORDER_STATUS_HISTORY_CREATED_AT` (`created_at`),
   CONSTRAINT `FK_CE7C71E74CB74DDACED337CEE6753D5E` FOREIGN KEY (`parent_id`) REFERENCES `sales_flat_order` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Status History';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Order Status History';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_quote`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5472,7 +5472,7 @@ CREATE TABLE `sales_flat_quote` (
   KEY `IDX_SALES_FLAT_QUOTE_CUSTOMER_ID_STORE_ID_IS_ACTIVE` (`customer_id`,`store_id`,`is_active`),
   KEY `IDX_SALES_FLAT_QUOTE_STORE_ID` (`store_id`),
   CONSTRAINT `FK_SALES_FLAT_QUOTE_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_quote_address`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5543,7 +5543,7 @@ CREATE TABLE `sales_flat_quote_address` (
   PRIMARY KEY (`address_id`),
   KEY `IDX_SALES_FLAT_QUOTE_ADDRESS_QUOTE_ID` (`quote_id`),
   CONSTRAINT `FK_SALES_FLAT_QUOTE_ADDRESS_QUOTE_ID_SALES_FLAT_QUOTE_ENTITY_ID` FOREIGN KEY (`quote_id`) REFERENCES `sales_flat_quote` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Address';
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Address';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_quote_address_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5664,7 +5664,7 @@ CREATE TABLE `sales_flat_quote_item` (
   CONSTRAINT `FK_SALES_FLAT_QUOTE_ITEM_PRD_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`product_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_SALES_FLAT_QUOTE_ITEM_QUOTE_ID_SALES_FLAT_QUOTE_ENTITY_ID` FOREIGN KEY (`quote_id`) REFERENCES `sales_flat_quote` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_SALES_FLAT_QUOTE_ITEM_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_quote_item_option`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5678,7 +5678,7 @@ CREATE TABLE `sales_flat_quote_item_option` (
   PRIMARY KEY (`option_id`),
   KEY `IDX_SALES_FLAT_QUOTE_ITEM_OPTION_ITEM_ID` (`item_id`),
   CONSTRAINT `FK_5F20E478CA64B6891EA8A9D6C2735739` FOREIGN KEY (`item_id`) REFERENCES `sales_flat_quote_item` (`item_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item Option';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item Option';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_quote_payment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5712,7 +5712,7 @@ CREATE TABLE `sales_flat_quote_payment` (
   PRIMARY KEY (`payment_id`),
   KEY `IDX_SALES_FLAT_QUOTE_PAYMENT_QUOTE_ID` (`quote_id`),
   CONSTRAINT `FK_SALES_FLAT_QUOTE_PAYMENT_QUOTE_ID_SALES_FLAT_QUOTE_ENTITY_ID` FOREIGN KEY (`quote_id`) REFERENCES `sales_flat_quote` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Payment';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Payment';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_quote_shipping_rate`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -5733,7 +5733,7 @@ CREATE TABLE `sales_flat_quote_shipping_rate` (
   PRIMARY KEY (`rate_id`),
   KEY `IDX_SALES_FLAT_QUOTE_SHIPPING_RATE_ADDRESS_ID` (`address_id`),
   CONSTRAINT `FK_B1F177EFB73D3EDF5322BA64AC48D150` FOREIGN KEY (`address_id`) REFERENCES `sales_flat_quote_address` (`address_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Shipping Rate';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Shipping Rate';
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `sales_flat_shipment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
