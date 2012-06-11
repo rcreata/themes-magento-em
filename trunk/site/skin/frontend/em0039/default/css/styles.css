@@ -1925,54 +1925,17 @@ body {
 	border-top: none;
 }
 
-.top-main-container, .header-container + .main-container {
-	padding-top: 27px;
-	background: url(../images/top-main-container_bg.jpg) repeat-x 0 0 transparent;
-}
+.top-main-container, .header-container + .main-container {	padding-top: 27px; background: url(../images/top-main-container_bg.jpg) repeat-x 0 0 transparent;}
 
-.top-main-container {
-	padding-top: 7px;
-}
-
-.name-price {
-	padding: 0 27px;
-}
-
-.products-grid .product-name{
-	
-}
-
-.price-box {
-	clear: both;
-	overflow: hidden;
-}
-
-.price-box strong {
-	float: left;
-}
-
-.price-box span {
-	float: right;
-	color: #c26529;
-}
-
-.footer-news {
-	position: relative;
-	margin-top: 70px;
-	width: 960px;
-	margin: 0 auto;
-	margin-bottom: 20px;
-}
-
-.main-container {
-	background: none transparent;
-}
-
-.footer-news > img {
-	position: absolute;
-	left: 0;
-	bottom: 2px;
-}
+.top-main-container {	padding-top: 7px;}
+.name-price {	padding: 0 10px;}
+.products-grid .product-name{}
+.price-box {	clear: both;	overflow: hidden;}
+.price-box strong {	float: left;}
+.price-box span {	float: right;	color: #c26529;}
+.footer-news {	position: relative;	margin-top: 70px;	width: 960px;	margin: 0 auto;	margin-bottom: 20px;}
+.main-container {	background: none transparent;}
+.footer-news > img {	position: absolute;	left: 0;	bottom: 2px;}
 
 .footer-news > ul {
 	height: 36px;
@@ -2009,36 +1972,10 @@ body {
 	text-align: left;
 }
 
-.footer-main-container .block-title strong, .footer-main-container .block-title {
-	font-size: 20px;
-	color: #3d2817;
-	padding-left: 0;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-.block-subscribe .block-content {
-	background: url('../images/newsletter_form.png') no-repeat 0 0 transparent;
-	width: 225px;
-	height: 34px;
-	position: relative;
-	padding: 1px 6px 7px 1px;
-
-}
-
-.block-subscribe input[type="text"] {
-	height: 28px;
-	line-height: 28px;
-	margin-left: 18px;
-	margin-top: 2px;
-	border: none;
-	padding: 0;
-}
-
-.block-subscribe .actions button.button span {
-	border: none;
-	background-color: transparent;
-}
+.footer-main-container .block-title strong, .footer-main-container .block-title {	font-size: 20px;	color: #3d2817;	padding-left: 0; text-transform: uppercase;	font-weight: bold;}
+.block-subscribe .block-content {	background: url('../images/newsletter_form.png') no-repeat 0 0 transparent;	width: 225px;	height: 34px;	position: relative;	padding: 1px 6px 7px 1px;}
+.block-subscribe input[type="text"] {	height: 28px;	line-height: 28px;	margin-left: 18px;	margin-top: 2px;	border: none;	padding: 0;}
+.block-subscribe .actions button.button span {	border: none;	background-color: transparent;}
 
 .block-subscribe button[type="submit"] {
 	position: absolute;
