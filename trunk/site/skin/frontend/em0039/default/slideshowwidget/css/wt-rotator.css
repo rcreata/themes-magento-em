@@ -1,0 +1,278 @@
+.wt-rotator{
+font-family:Arial,Helvetica,sans-serif;
+font-size:14px;
+background-color: #ede6da;
+position:relative;
+height:300px;
+overflow:hidden;
+margin: 0 auto;
+}
+.wt-rotator a{
+outline:none; cursor: pointer !important;
+}
+.wt-rotator .screen{
+position:relative;
+top:0;
+left:0;
+overflow:hidden;
+height: 300px;
+width: 100% !important;
+}
+.wt-rotator .main-img{
+display:none;
+position:absolute;
+top:0;
+left:0;
+z-index:0;
+border:0;
+}
+.wt-rotator .preloader{
+background:url(assets/loader.gif) no-repeat center;
+float:left;
+width:34px;
+height:34px;
+position:absolute;
+top:50%;
+left:50%;
+margin-top:-17px;
+margin-left:-17px;
+z-index:4;
+display:none;
+}
+.wt-rotator #timer{
+position:absolute;
+left:0;
+height:4px;
+background-color:#FFF;
+filter:alpha(opacity=50);
+opacity:0.50;
+z-index:4;
+visibility:hidden;
+font-size:0;
+}
+.wt-rotator .desc{
+color:#000;
+position:relative;
+top:0;
+left:0;
+z-index:6;
+visibility:hidden;
+text-align:left;
+width: 960px !important;
+margin: 0 auto;
+
+}
+.wt-rotator .inner-bg{
+position:absolute;
+width:100%;
+height:100%;
+background: none;
+z-index:0;
+background: none !important;
+}
+.wt-rotator .inner-text{
+position:absolute;
+z-index:1;  
+top: 147px;
+left:0;
+}
+.wt-rotator .inner-text .style{height: 113px;position: relative;margin: 0 -350px;display: block;}
+.wt-rotator .inner-text .style p{
+    height: 109px;
+    left: 920px;
+    position: absolute;
+    margin-top: 40px;
+    width: 370px !important;
+}
+.wt-rotator .inner-text .style p span{
+    clear: both;
+    color: #000;
+}
+.wt-rotator .inner-text .style ul{
+    height: 109px;
+    left: 970px;
+    position: absolute;
+    margin-top: 160px;
+    width: 350px !important;
+}
+.wt-rotator .inner-text .style ul li{
+    clear: both;
+    color: #000;
+    background: url(assets/cat_hover.png) no-repeat left 5px transparent;
+	padding-left: 20px;
+}
+.wt-rotator .inner-text .style img{
+    height: 109px;
+    left: 880px;
+    position: absolute;
+    margin-top: -90px !important;
+}
+.wt-rotator .inner-text .style .left{ height: 109px;
+    position: absolute;
+    left:-144px !important;
+    top: 0;
+    width: 921px;overflow:hidden;}
+.wt-rotator .inner-text .style .right{ height: 109px;
+    left: 1322px;
+    position: absolute;
+    top: 0;
+    width: 460px;}
+.wt-rotator .inner-text .des {
+    background: none repeat scroll 0 0 #141414;
+    height: 110px;
+    margin-top: 36px;
+    position: relative;
+    width: 350px;}
+.wt-rotator .inner-text .des  img {  position: absolute;   right: 0;  top: -118px;}
+.wt-rotator .inner-text .des2 img,.wt-rotator .inner-text .des3 img {
+    position: absolute;
+    right: 40px;
+    top: -198px;
+}
+.wt-rotator .inner-text .des p {
+    color: #3d2817;
+    float: left;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-left: 25px;
+    width: 280px;
+    padding-right: 20px;}
+.wt-rotator .inner-text .des p span { padding-right: 25px;line-height: 14px;display: inline-block;}
+.wt-rotator .inner-text .action {  margin-top: 36px; float: left;}
+.wt-rotator .inner-text .action button { }
+.wt-rotator .inner-text .action button span { font-size: 11px; height: 34px;  line-height: 34px;padding-left: 18px;}
+.wt-rotator .inner-text .action button span span {  background-position: 100% 100%;   padding: 0 38px 0 0;}
+.wt-rotator .c-panel{
+position:absolute;
+float:left;
+z-index:7;
+visibility:hidden;
+left: 0 !important;
+top: 178px !important;
+width: 100%;
+}
+.wt-rotator .cp-bg{
+background:#222;
+background:-webkit-gradient(linear, left top, left bottom, from(#333333), to(#111111));
+background:-moz-linear-gradient(top,  #333333,  #111111);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#111111')" !important; 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#333333', EndColorStr='#111111') !important;
+border:1px solid #000;
+}
+.wt-rotator .thumbnails,
+.wt-rotator .buttons{
+float:none !important;
+overflow:hidden;
+}
+.wt-rotator .buttons{  position: relative; width: 960px; margin: 0 auto;}
+.wt-rotator .thumbnails { display: none;}
+.wt-rotator .thumbnails ul{
+list-style:none;
+margin:0;
+padding:0;
+}
+.wt-rotator .thumbnails li,
+.wt-rotator .play-btn,
+.wt-rotator .prev-btn,
+.wt-rotator .next-btn{
+list-style:none;
+display:block;
+float:left;
+margin-right:4px;
+overflow:hidden;
+width:24px;
+height:24px;
+line-height:24px;
+text-align:center;
+color:#FFF;
+cursor:pointer;
+font-weight:bold;
+}
+.wt-rotator .prev-btn,
+.wt-rotator .next-btn{ width: 23px !important; height: 42px !important;} 
+.wt-rotator .thumbnails li.thumb-over{
+color:#FFF;
+background-color:#CCC;
+}
+.wt-rotator .thumbnails li.curr-thumb{
+color:#000;
+background-color:#FFF;
+cursor:default;
+}
+.wt-rotator .thumbnails li *{
+display:none;
+}
+.wt-rotator .thumbnails li div{
+position:absolute;
+color:#FFF;
+background-color:#000;
+}
+.wt-rotator .play-btn{display: none;
+
+}
+.wt-rotator .pause{ display: none;
+
+}
+.wt-rotator .prev-btn{
+background: url(assets/prev.png) no-repeat center;
+}
+.wt-rotator .next-btn{
+background: url(assets/next.png) no-repeat center;float: right;
+}
+.wt-rotator .button-over{
+
+}
+#rotator-tooltip{
+position:absolute;
+top:0;
+left:0;
+z-index:99999;
+display:none;
+}
+#rotator-tooltip.txt-up{
+margin-left:-10px;
+margin-bottom:5px;
+background:url(assets/tail.png) no-repeat;
+background-position:10px bottom;
+background-position-x:10px;
+background-position-y:bottom;
+}
+#rotator-tooltip.txt-down{
+margin-left:-10px;
+margin-top:24px;
+background:url(assets/rev_tail.png) no-repeat;
+background-position:10px top;
+background-position-x:10px;
+background-position-y:top;
+}
+#rotator-tooltip.img-up{
+margin-left:5px;
+margin-bottom:5px;
+background:url(assets/tail.png) center bottom no-repeat;
+}
+#rotator-tooltip.img-down{
+margin-left:5px;
+margin-top:24px;
+background:url(assets/rev_tail.png) center top no-repeat;
+}
+#rotator-tooltip .tt-txt{
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+color:#FFF;
+background-color:#000;
+max-width:300px;
+padding:4px;
+margin:8px 0;
+}
+#rotator-tooltip .tt-img{
+background-color:#000;
+padding:2px;
+margin:8px 0;
+}
+.wt-rotator .block,
+.wt-rotator .vpiece,
+.wt-rotator .hpiece{
+position:absolute;
+z-index:2;
+}
