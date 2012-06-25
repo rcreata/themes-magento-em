@@ -36,7 +36,7 @@ Category default layout
             <block type="core/template" name="optional_zip_countries" as="optional_zip_countries" template="directory/js/optional_zip_countries.phtml" />
         </reference>
         <reference name="footer">
-            <block type="directory/currency" name="currency" after= "store_language" template="directory/currency.phtml"/>
+            <block type="directory/currency" name="footer_currency" after= "store_language" template="directory/currency.phtml"/>
         </reference>
     </default>
 
