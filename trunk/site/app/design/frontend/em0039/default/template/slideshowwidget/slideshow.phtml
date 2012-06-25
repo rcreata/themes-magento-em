@@ -8,6 +8,8 @@
  * @copyright   Copyright (c) 2009 Quick Solution LT
  * 
  */
+$helper = Mage::helper('cms');
+$processor = $helper->getBlockTemplateProcessor();
 ?>
 <div class="container">
 	<div class="wt-rotator">
@@ -32,7 +34,7 @@
 							<a href="<?php echo $url1;?>"></a>
 						<?php endif;?>
                         <div>
-							<?php echo $text1 ?>
+							<?php echo $processor->filter($text1) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -43,7 +45,7 @@
 						<a href="<?php echo $url2;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text2 ?>
+                           <?php echo $processor->filter($text2) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -54,7 +56,7 @@
 						<a href="<?php echo $url3;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text3 ?>
+                           <?php echo $processor->filter($text3) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -65,7 +67,7 @@
 						<a href="<?php echo $url4;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text4 ?>
+                           <?php echo $processor->filter($text4) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -76,7 +78,7 @@
 						<a href="<?php echo $url5;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text5 ?>
+                           <?php echo $processor->filter($text5) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -87,7 +89,7 @@
 							<a href="<?php echo $url6;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text6 ?>
+                           <?php echo $processor->filter($text6) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -98,7 +100,7 @@
 							<a href="<?php echo $url7;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text7 ?>
+                           <?php echo $processor->filter($text7) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -109,7 +111,7 @@
 							<a href="<?php echo $url8;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text8 ?>
+                           <?php echo $processor->filter($text8) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>
@@ -120,7 +122,7 @@
 						<a href="<?php echo $url9;?>"></a>
 						<?php endif;?>
                         <div>
-                           <?php echo $text9 ?>
+                           <?php echo $processor->filter($text9) ?>
                     	</div>                         
                     </li>
 					<?php endif ?>

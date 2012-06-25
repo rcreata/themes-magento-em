@@ -62,7 +62,7 @@ TABLE OF CONTENTS
 }
 .menu li .drop {
 	/*padding-right:21px;*/
-	background:url("img/drop.png") no-repeat right 8px;
+	background:url("img/drop.png") no-repeat right 8px;font-family: 'Myriad Proca'; 
 }
 .menu li:hover .drop {
 	/* padding-right:21px; */
@@ -105,11 +105,11 @@ TABLE OF CONTENTS
 	margin:4px auto;
 	left:-999em;
 	position:absolute;
-	background:#F4F4F4;
 	border:1px solid #aaaaaa;
 	border-top:none;
 	padding:10px;
 	text-align:left;
+	 z-index:20; 
 
 	/* CSS 3 Stylings */
 
@@ -118,17 +118,20 @@ TABLE OF CONTENTS
     -khtml-border-radius: 0px 5px 5px 5px;
     border-radius: 0px 5px 5px 5px;
 	
-	background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);
+	/*background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);*/
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEEEE), to(#BBBBBB));
 }
 
 /* Drop Downs Sizes */
 
-.menu .dropdown_1columns {width: 145px;}
-.menu .dropdown_2columns {width: 300px;}
-.menu .dropdown_3columns {width: 455px;}
-.menu .dropdown_4columns {width: 610px;}
-.menu .dropdown_5columns {width: 765px;}
+.menu .inner {overflow:hidden}
+.dropdown_1columns .inner {overflow:visible;background-color:#fff}
+.dropdown_1columns {background:#fff}
+.menu .dropdown_1columns {width: 145px;background:#fff !important ; padding-bottom:10px;}
+.menu .dropdown_2columns {width: 300px;background:#fff !important ;padding-bottom:10px;}
+.menu .dropdown_3columns {width: 455px;background:#fff !important ;padding-bottom:10px;}
+.menu .dropdown_4columns {width: 610px;background:#fff !important ;padding-bottom:10px;}
+.menu .dropdown_5columns {width: 765px;background:#fff !important ;padding-bottom:10px;}
 
 /* Showing Drop Down on Mouse Hover - Left aligned */
 
@@ -341,6 +344,7 @@ TABLE OF CONTENTS
 	float:left;
 	text-align:left;
 	width:145px;
+	border: none;
 }
 .menu li ul li:hover {
 	background:none;
@@ -464,6 +468,35 @@ TABLE OF CONTENTS
 {display:block;}
 
 
+/* 2-Levels Drop Down */
+.menu .col_1 .levels ul{width: 145px;background:url(../images/1dropdown.png) 0 bottom no-repeat;}
+.menu .col_2  .levels ul{width: 300px;background:url(../images/2dropdown.png) 0 bottom no-repeat;}
+.menu .col_3  .levels ul{width: 455px;background:url(../images/3dropdown.png) 0 bottom no-repeat;}
+.menu .col_4  .levels ul{width: 610px;background:url(../images/4dropdown.png) 0 bottom no-repeat;}
+.menu .col_5  .levels ul{width: 765px;background:url(../images/5dropdown.png) 0 bottom no-repeat;}
+.menu .levels {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.menu .levels li li, .menu .levels li li:hover {
+	padding: 0px 10px;
+}
+.menu .col_1 .levels li li,.menu .col_1 .levels li li:hover{width: 125px;}
+.menu .col_2  .levels li li,.menu .col_2  .levels li li:hover{width: 270px;}
+.menu .col_3  .levels li li,.menu .col_3  .levels li li:hover{width: 425px;}
+.menu .col_4  .levels li li,.menu .col_4  .levels li li:hover{width: 580px;}
+.menu .col_5  .levels li li,.menu .col_5  .levels li li:hover{width: 735px;}
+.menu .levels ul { /* First level drop down */
+	position:absolute;
+	z-index:500;
+	top:-23px;
+	left:100%;
+	display:none;
+	margin:15px 0px 0px 0px;
+	padding:6px 0px 6px 0px;
+}
+
 
 
 
@@ -564,3 +597,10 @@ TABLE OF CONTENTS
 	border:#adec71 solid 1px;
 	color:#37620d;
 }
+.menu span.title {
+    border-bottom: 1px solid #E7E3CC;
+    color: #64482C;
+    display: block;
+    font-family: 'Lobster14Regular';
+    font-size: 16px;
+    padding-top: 5px;}
