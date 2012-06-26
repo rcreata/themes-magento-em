@@ -24,16 +24,27 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-
+<?php 
+	$_product = Mage::registry('product');
+    $_productId= $_product->getId();
+	$url1= Mage::getUrl('review/product/list', array('id' => $_productId));
+	$url2= $this->getUrl('*/*/*', array('_current' => true,'_use_rewrite'=>true))
+?>
 <?php $_items = $this->getReviewsCollection()->getItems();?>
+<div class="shadow">
 <div class="box-collateral box-reviews" id="customer-reviews">
+	
     <?php if (count($_items)):?>
+		<div class="customer-reviews">
         <h2><?php echo $this->__('Customer Reviews') ?></h2>
         <?php echo $this->getChildHtml('toolbar') ?>
         <dl>
+		<?php $i=0;?>
         <?php foreach ($_items as $_review):?>
+			<?php if(($url1!=$url2)&&($i>4)){break;}?>
+			<div class="group-review">
             <dt>
-                <a href="<?php echo $this->getReviewUrl($_review->getId()) ?>"><?php echo $this->htmlEscape($_review->getTitle()) ?></a> <?php echo $this->__('Review by <span>%s</span>', $this->htmlEscape($_review->getNickname())) ?>
+                <a href="<?php echo Mage::getUrl('review/product/view', array('id'=> $_review->getId())); ?>"><?php echo $this->htmlEscape($_review->getTitle()) ?></a> 
             </dt>
             <dd>
                 <?php $_votes = $_review->getRatingVotes(); ?>
@@ -56,11 +67,22 @@
                 </table>
                 <?php endif; ?>
                 <?php echo nl2br($this->htmlEscape($_review->getDetail())) ?>
-                <small class="date"><?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?></small>
+                <!--small class="date"><?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?></small-->
+				<small class="date"><?php echo $this->__('Review by <span>%s</span>', $this->htmlEscape($_review->getNickname())) ?></small>
+				
             </dd>
-        <?php endforeach; ?>
+			</div>
+		
+        <?php $i++; endforeach; ?>
+			<?php if(count($_items)>5 && ($url1!=$url2)){ ?>
+                <a href="<?php echo Mage::getUrl('review/product/list', array('id' => $_productId));?>">View all</a>
+            <?php
+            }
+            ?>
         </dl>
         <?php echo $this->getChildHtml('toolbar') ?>
+		</div>
     <?php endif;?>
     <?php echo $this->getChildHtml('review_form') ?>
+</div>
 </div>
