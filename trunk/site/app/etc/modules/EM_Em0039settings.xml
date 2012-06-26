@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <EM_EM0039Settings>
+        <EM_Em0039settings>
             <active>true</active>
             <codePool>community</codePool>
-        </EM_EM0039Settings>
+        </EM_Em0039settings>
     </modules>
 </config> 
