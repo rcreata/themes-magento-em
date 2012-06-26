@@ -38,23 +38,26 @@ TABLE OF CONTENTS
 	float:left;
 	text-align:center;
 	position:relative;
-	padding: 3px 10px;
-	border-left: 1px dashed #000;
-	border-right: 1px dashed #DE9468;
 	font-size: 12px;
+	height: 30px;
+	line-height: 15px;
+	padding-top: 3px;
 	}
-	.menu li:first-child {
+	.menu li:first-child  a{
 		border-left: none;
 	}
-	.menu li:last-child {
+	.menu li:last-child  a{
 		border-right: none;
 	}
-	.menu li a {
+	.menu li a{
 		color: #fff;
 		outline:0;
 		text-decoration:none;
 		display:block;
 		font-size: 12px;
+		padding: 3px 10px;
+	}
+	.menu li .drop{
 	}
 .menu li:hover a {
 	color:#3d2817;
@@ -62,7 +65,7 @@ TABLE OF CONTENTS
 }
 .menu li .drop {
 	/*padding-right:21px;*/
-	background:url("img/drop.png") no-repeat right 8px;font-family: 'Myriad Proca'; 
+	background:url("img/drop.png") no-repeat right 8px;font-family: 'CooperBlackRegular'; border-left: 1px dashed #000;		border-right: 1px dashed #DE9468;	
 }
 .menu li:hover .drop {
 	/* padding-right:21px; */
@@ -601,6 +604,6 @@ TABLE OF CONTENTS
     border-bottom: 1px solid #E7E3CC;
     color: #64482C;
     display: block;
-    font-family: 'Lobster14Regular';
+    font-family: 'CooperBlackRegular';
     font-size: 16px;
     padding-top: 5px;}
