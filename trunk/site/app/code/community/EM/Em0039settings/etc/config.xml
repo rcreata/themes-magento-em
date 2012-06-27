@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <EM_EM0039Settings>
+        <EM_Em0039settings>
             <version>0.1.0</version>
-        </EM_EM0039Settings>
+        </EM_Em0039settings>
     </modules>
 	 <adminhtml>
         <acl>
@@ -32,7 +32,7 @@
             <em0039settings>
                 <use>standard</use>
                 <args>
-                    <module>EM_EM0039Settings</module>
+                    <module>EM_Em0039settings</module>
                     <frontName>em0039settings</frontName>
                 </args>
             </em0039settings>
@@ -50,7 +50,7 @@
 			<em0039settings>
 				<use>admin</use>
 				<args>
-					<module>EM_EM0039Settings</module>
+					<module>EM_Em0039settings</module>
 					<frontName>em0039settings</frontName>
 				</args>
 			</em0039settings>
@@ -65,10 +65,10 @@
 				</all>
 				<admin>
 					<children>
-						<EM_EM0039Settings>
+						<EM_Em0039settings>
 							<title>EM0039Settings Module</title>
 							<sort_order>10</sort_order>
-						</EM_EM0039Settings>
+						</EM_Em0039settings>
 					</children>
 				</admin>
 			</resources>
@@ -84,11 +84,11 @@
     <global>
         <models>
             <em0039settings>
-                <class>EM_EM0039Settings_Model</class>
+                <class>EM_Em0039settings_Model</class>
                 <resourceModel>em0039settings_mysql4</resourceModel>
             </em0039settings>
             <em0039settings_mysql4>
-                <class>EM_EM0039Settings_Model_Mysql4</class>
+                <class>EM_Em0039settings_Model_Mysql4</class>
                 <entities>
                     <em0039settings>
                         <table>em0039settings</table>
@@ -99,7 +99,7 @@
         <resources>
             <em0039settings_setup>
                 <setup>
-                    <module>EM_EM0039Settings</module>
+                    <module>EM_Em0039settings</module>
 					<class>Mage_Eav_Model_Entity_Setup</class>
                 </setup>
                 <connection>
@@ -119,12 +119,12 @@
         </resources>
         <blocks>
             <em0039settings>
-                <class>EM_EM0039Settings_Block</class>
+                <class>EM_Em0039settings_Block</class>
             </em0039settings>
         </blocks>
         <helpers>
             <em0039settings>
-                <class>EM_EM0039Settings_Helper</class>
+                <class>EM_Em0039settings_Helper</class>
             </em0039settings>
         </helpers>
     </global>
@@ -155,8 +155,8 @@
                 <widget_width>188</widget_width>
 				<widget_height>188</widget_height>
                 <widget_bgcolor>#FFF</widget_bgcolor>
-                <mostpopular_width>198</mostpopular_width>
-                <mostpopular_height>198</mostpopular_height>
+                <mostpopular_width>195</mostpopular_width>
+                <mostpopular_height>195</mostpopular_height>
                 <mostpopular_bgcolor>#FFF</mostpopular_bgcolor>
 				<tab_width>85</tab_width>
 				<tab_height>85</tab_height>
