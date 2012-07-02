@@ -117,8 +117,8 @@ ul,ol         { list-style:none; }
 .col3-layout .col-wrapper .col-main { float:right; }
 
 /* Content Columns */
-.col2-set .col-1 { float:left; width:48.5%; }
-.col2-set .col-2 { float:right; width:48.5%; }
+.col2-set .col-1 { float:left; width:49.8%; border-right:1px dashed #333232;}
+.col2-set .col-2 { float:right; width:49.8%;}
 .col2-set .col-narrow { width:32%; }
 .col2-set .col-wide { width:65%; }
 
@@ -1199,15 +1199,15 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-table .btn-continue { float:left; }
 .cart-table .btn-empty span,
 .cart-table .btn-continue span,
-.cart-table .btn-update span { border-color:#406a83; background:#618499; }
+.cart-table .btn-update span { /*border-color:#406a83; background:#618499; */}
 .cart-table .btn-update,
 .cart-table .btn-empty { float:right; }
 .cart-table .btn-update { margin-left:10px; }
 
 /* Shopping Cart Collateral boxes */
-.cart .cart-collaterals { padding:25px 0 0; }
-.cart .cart-collaterals .col2-set { float:left; width:605px; }
-.cart .cart-collaterals .col2-set .col-2 { width:294px; }
+.cart .cart-collaterals { padding:25px 0 0; background-color:#EDE6DA;}
+.cart .cart-collaterals .col2-set { float:left; width:640px; }
+.cart .cart-collaterals .col2-set .col-2 { }
 
 .cart .crosssell { border:1px solid #cec3b6; background:#fafaec; padding:12px 15px; }
 .cart .crosssell h2 { font-size:13px; font-weight:bold; }
@@ -1219,7 +1219,9 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Discount Codes & Estimate Shipping and Tax Boxes */
 .cart .discount,
-.cart .shipping { border:1px solid #d0cbc1; background:#fff url(../images/bkg_block-title.gif) 0 0 repeat-x; padding:12px 15px; margin:0 0 18px; }
+.cart .shipping { padding:12px 15px; margin:0 0 18px;}
+.cart .discount{ height:200px;}
+.cart .shipping{ border-right:1px dashed #333232;  border-left:1px dashed #333232;}
 .cart .discount h2,
 .cart .shipping h2 { background-position:0 0; background-repeat:no-repeat; font:bold 13px/16px Arial, Helvetica, sans-serif; padding:0 0 0 21px; color:#e26703; text-transform:uppercase; }
 .cart .discount button span,
@@ -1237,7 +1239,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .shipping .sp-methods { margin:10px 0 0; padding:5px 0 0; background:url(../images/bkg_divider1.gif) 0 0 repeat-x; }
 
 /* Shopping Cart Totals */
-.cart .totals { float:right; width:268px; background:#dee5e8; border:1px solid #bebcb7; }
+.cart .totals { float:right; width:315px; /*background:#dee5e8;*/ border-left:1px dashed #333232; }
 .cart .totals table { width:100%; margin:7px 0; }
 .cart .totals td { padding:1px 15px 1px 7px; }
 .cart .totals tr.last td {}

@@ -63,8 +63,8 @@ mv $NAME-full-package/app/design/frontend/$NAME $NAME-theme-package/app/design/f
 mv $NAME-full-package/skin/frontend/$NAME $NAME-theme-package/skin/frontend
 
 # EM0039 Settings
-mv $NAME-full-package/app/code/community/EM/Em0022settings $NAME-theme-package/app/code/community/EM/
-mv $NAME-full-package/app/etc/modules/EM_Em0022settings.xml $NAME-theme-package/app/etc/modules/
+mv $NAME-full-package/app/code/community/EM/Em0039settings $NAME-theme-package/app/code/community/EM/
+mv $NAME-full-package/app/etc/modules/EM_Em0039settings.xml $NAME-theme-package/app/etc/modules/
 
 # MegaMenu extension
 mv $NAME-full-package/app/code/community/EM/Megamenu $NAME-theme-package/app/code/community/EM/
@@ -90,15 +90,6 @@ mv $NAME-full-package/skin/frontend/base/default/css/em_ajaxcart $NAME-theme-pac
 mv $NAME-full-package/skin/frontend/base/default/js/em_ajaxcart $NAME-theme-package/skin/frontend/base/default/js/
 mv $NAME-full-package/skin/frontend/base/default/images/em_ajaxcart $NAME-theme-package/skin/frontend/base/default/images/
 
-# Flexible Widget extension
-mv $NAME-full-package/app/code/community/EM/Flexiblewidget $NAME-theme-package/app/code/community/EM/
-mv $NAME-full-package/app/design/frontend/base/default/template/flexiblewidget $NAME-theme-package/app/design/frontend/base/default/template/
-mv $NAME-full-package/app/etc/modules/EM_Flexiblewidget.xml $NAME-theme-package/app/etc/modules/
-
-# Morningtime Latest Review extension
-mv $NAME-full-package/app/code/community/Morningtime/LatestReviews $NAME-theme-package/app/code/community/Morningtime/
-mv $NAME-full-package/app/etc/modules/Morningtime_LatestReviews.xml $NAME-theme-package/app/etc/modules/
-
 # Slideshow Widget extension
 mv $NAME-full-package/app/code/local/EM/SlideshowWidget $NAME-theme-package/app/code/local/EM/
 mv $NAME-full-package/app/etc/modules/EM_SlideshowWidget.xml $NAME-theme-package/app/etc/modules/
@@ -107,6 +98,16 @@ mv $NAME-full-package/app/design/frontend/base/default/template/slideshowwidget 
 mv $NAME-full-package/app/design/adminhtml/default/default/template/slideshowwidget $NAME-theme-package/app/design/adminhtml/default/default/template/
 mv $NAME-full-package/skin/frontend/base/default/slideshowwidget $NAME-theme-package/skin/frontend/base/default/
 mv $NAME-full-package/media/slideshow $NAME-theme-package/media/
+
+# Product filter widget
+mv $NAME-full-package/app/code/local/EM/Productsfilterwidget $NAME-theme-package/app/code/local/EM/
+mv $NAME-full-package/app/design/adminhtml/default/default/layout/em_productsfilterwidget.xml $NAME-theme-package/app/design/adminhtml/default/default/layout/
+mv $NAME-full-package/app/design/adminhtml/default/default/template/em_productsfilter $NAME-theme-package/app/design/adminhtml/default/default/template/
+mv $NAME-full-package/app/design/frontend/base/default/template/em_productsfilterwidget $NAME-theme-package/app/design/frontend/base/default/template/
+mv $NAME-full-package/app/etc/modules/EM_Productsfilterwidget.xml $NAME-theme-package/app/etc/modules/
+mv $NAME-full-package/js/em/productsfilter $NAME-theme-package/js/em/
+mv $NAME-full-package/skin/adminhtml/default/default/em/productsfilter $NAME-theme-package/skin/adminhtml/default/default/em/
+mv $NAME-full-package/media/em_productsfilter $NAME-theme-package/media/
 
 # install script
 mv $NAME-full-package/install.lib.php $NAME-theme-package/
