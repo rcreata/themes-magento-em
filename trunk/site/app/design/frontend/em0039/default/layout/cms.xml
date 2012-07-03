@@ -50,7 +50,8 @@ Default layout, loads most of the pages
 				</block>
 			</block>	
 		</reference>
-        <reference name="root">
+        <reference name="root">			
+			<block type="blog/post_recent" name="blog_recent" before="" template="em_blog/post/recent_footer.phtml" />
 			<block type="cms/block" name="em0039_footer_news" before="">
 				<action method="setBlockId"><block_id>em0039_footer_news</block_id></action>
 			</block>

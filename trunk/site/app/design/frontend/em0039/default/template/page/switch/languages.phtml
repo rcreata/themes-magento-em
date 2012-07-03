@@ -32,14 +32,17 @@
  */
 ?>
 <?php if(count($this->getStores())>1): ?>
-<div class="form-language">
-    <!--label><?php echo $this->__('Your Language:') ?></label-->
+<div class="form-language">   
 	<ul>
     <?php foreach ($this->getStores() as $_lang): ?>
-        <li<?php echo ($_lang->getId() == $this->getCurrentStoreId()) ? ' class="active"' : '' ?>>
-        <a href="<?php echo $_lang->getCurrentUrl() ?>"><?php echo $this->htmlEscape($_lang->getName()) ?></a></li>
+		<?php
+			$tam	=	$this->htmlEscape($_lang->getName());
+			$ten	=	substr($tam,0,2);
+		?>
+        <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? 'selected	' : '' ?>
+        <li class="<?php echo  $_selected ?>"><a href="<?php echo $_lang->getCurrentUrl() ?>" title="<?php echo $this->htmlEscape($_lang->getName()) ?>"><?php echo $ten ?></a></li>
     <?php endforeach; ?>
     </ul>
-
+	<script type="text/javascript">decorateGeneric($$('.form-language ul li'), ['first','last'])</script>
 </div>
 <?php endif; ?>
