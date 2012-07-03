@@ -58,13 +58,16 @@
                 </div>
             </div>
         </div>
+		<?php echo $this->getChildHtml('blog_recent'); ?>
         <?php echo $this->getChildHtml('em0039_footer_news'); ?>
         <div class="footer-main-container">
+			<div class="footer-container-main">
             <div class="footer-newsletter-picture">
                 <?php echo $this->getChildHtml('left.newsletter'); ?>
                 <?php echo $this->getChildHtml('em0039_footer_picture'); ?>
             </div>
             <?php echo $this->getChildHtml('footer-main-container') ?>
+			</div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>
 

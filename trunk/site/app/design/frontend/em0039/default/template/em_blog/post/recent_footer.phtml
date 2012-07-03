@@ -1,0 +1,35 @@
+<?php if(Mage::getStoreConfig('blog/menu/show_recent_post')):?>
+<div class="footer_blog_recent">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('News'); ?></span></strong>
+    </div>
+    <div class="block-content">
+        <ul>
+            <?php foreach ($this->getRecentPost() as $p): ?>
+				<?php 
+					$desc	=	strip_tags($p->getPost_intro());
+					if(strlen($desc) > 100 ){
+						$tam	=	substr($desc, 0, 100);
+						$plit	=	explode(" ", $tam);
+						$tam	=	array_slice($plit,0,count($plit)-1);
+						$desc	=	implode(" ", $tam).'...<span></span>';	
+					}
+				?>
+                <li class="item">
+					
+					<a class="post_title" href="<?php echo Mage::getUrl('blog').$p->getPostIdentifier().'.html';?>" ><?php echo $p->getTitle();?></a>
+					<!--p class="recent_time">
+						<?php $date = new DateTime($p->getPostOn());?>
+						<span class="time_day"><?php echo $date->format('j'); ?></span>
+						<span class="time_month"><?php echo $date->format('M'); ?></span>
+					</p-->
+					 
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+			<!--div class="post_title"><a title="<?php echo $this->__('Go to Blog')?>" href="<?php echo $this->getBaseUrl().'blog'; ?>"><?php echo $this->__('Find more')?></a></div-->
+
+</div>
+
+<?php endif;?>
