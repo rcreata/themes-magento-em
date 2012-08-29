@@ -25,10 +25,10 @@ TABLE OF CONTENTS
 
 
 
-.menu { font-size: 13px;  height:35px;float:left;padding: 0 10px 0 20px;clear:both;margin:0 auto;background:url("../images/menu_bg.jpg") repeat-x scroll 0 0 transparent;border-radius:0 0 7px 7px;}
+.menu, #nav { font-size: 13px;  height:35px;float:left;padding: 0 10px 0 20px;clear:both;margin:0 auto;background:url("../images/menu_bg.jpg") repeat-x scroll 0 0 transparent;border-radius:0 0 7px 7px;}
 .menu li { text-align:center;position:relative;border:none;display:block;float: left;}
-.menu li.submenu{ height:43px; line-height:43px; float: left;position:relative;background:url("../images/ver_link_menu.png") no-repeat right center;}
-.menu li.submenu.last{background:none;}
+.menu li.submenu{ height:43px; line-height:43px; float: left;position:relative;background:url("../images/ver_link_menu.png") no-repeat right 6px;}
+.menu li.submenu.last,.menu li.submenu:last-child{background:none;}
 .menu li.last a{padding-right:0 !important;}
 .menu li.submenu.first a{ }
 .menu li.submenu.last a{  }
@@ -85,7 +85,7 @@ TABLE OF CONTENTS
 .menu .dropdown_3columns, 
 .menu .dropdown_4columns,
 .menu .dropdown_5columns ,
-.menu .dropdown_6columns{ margin:0px auto 0px;left:-999em;position:absolute;/*border-top:1px solid #dedcdc;*/padding:20px 0px 0px;text-align:left;z-index: 99;background:#fff;border: 1px solid #e6e6e6;}
+.menu .dropdown_6columns{ margin:0px auto 0px;left:-999em;position:absolute;/*border-top:1px solid #dedcdc;*/padding:20px 0px 20px;text-align:left;z-index: 99;background:#fff;border: 1px solid #e6e6e6;}
 
 /* Drop Downs Sizes */
 .menu .inner {overflow:hidden;}
@@ -168,7 +168,7 @@ TABLE OF CONTENTS
 /* Use the firstcolumn class for the items that stick to the left edge of the dropdown */
 .menu .firstcolumn {	clear: left;}
 .menu .col_1.firstcolumn p {clear: left;}
-.menu .dropdown_1columns  .col_1{width:148px;padding:0;}
+.menu .dropdown_1columns  .col_1{width:148px;}
 .menu .dropdown_1columns  ul li{padding:0 0 0 20px;}
 /*  _______________________________________
 	03 CONTENT STYLINGS

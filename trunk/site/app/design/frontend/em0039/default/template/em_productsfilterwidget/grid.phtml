@@ -16,7 +16,7 @@
         <h2><?php echo $this->__('Most Popular') ?></h2>
     </div>    
     <?php $_collectionSize = $data->count() ?>
-    <?php $_columnCount = $this->getColumnCount(); ?>
+    <?php $_columnCount = $em0039->get_column_count(); ?>
     <?php $i=0; foreach ($data as $_product): ?>
 	<?php if(($this->getData('special') == 3 or $this->getData('special') == 4 ) && $data->isEnabledFlat() ) : ?>
 		<?php $_product	=	 Mage::getModel('catalog/product')->load($_product->getId()) ?>
@@ -31,9 +31,9 @@
                     </a>
                     <div class="name-price">
                         <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
-                        <?php if($_product->getRatingSummary()): ?>
+                       
                         <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
-                        <?php endif; ?>
+                        
                         <?php echo $this->getPriceHtml($_product, true) ?></p>
                     </div>
                 </div>

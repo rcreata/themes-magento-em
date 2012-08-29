@@ -40,12 +40,21 @@
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
+
+        <!-- Top-Content -->
+        <div class="top-main-container">
+			<?php echo $this->getChildHtml('em0039_main_slideshow');?>
+        </div>
+        
         <div class="main-container col3-layout">
             <div class="main">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
                 <div class="col-wrapper">
                     <div class="col-main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
                         <?php echo $this->getChildHtml('global_messages') ?>
+					<?php echo $this->getChildHtml('em0039_home_most_popular') ?>
+					<?php echo $this->getChildHtml('em0039_fresh') ?>
+					<?php echo $this->getChildHtml('em0039_new_product') ?>
                         <?php echo $this->getChildHtml('content') ?>
                     </div>
                     <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
@@ -53,15 +62,20 @@
                 <div class="col-right sidebar"><?php echo $this->getChildHtml('right') ?></div>
             </div>
         </div>
-        <?php echo $this->getChildHtml('em0039_footer_news'); ?>
+		<div class="footer-news"><?php echo $this->getChildHtml('blog_recent'); ?></div>
+        <?php // echo $this->getChildHtml('em0039_footer_news'); ?>
         <div class="footer-main-container">
-            <div class="footer-newsletter-picture">
-                <?php echo $this->getChildHtml('left.newsletter'); ?>
-                <?php echo $this->getChildHtml('em0039_footer_picture'); ?>
-            </div>
-            <?php echo $this->getChildHtml('footer-main-container') ?>
+			<div class="footer-image"><?php echo $this->getChildHtml('em0039_image_footer'); ?></div>
+			<div class="footer-container-main"><div class="footer-content">
+				<div class="footer-newsletter-picture">
+					<?php echo $this->getChildHtml('left.newsletter'); ?>
+					<?php echo $this->getChildHtml('em0039_footer_picture'); ?>
+				</div>
+				<?php echo $this->getChildHtml('footer-main-container') ?>
+			</div></div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>
+
         <?php echo $this->getChildHtml('before_body_end') ?>
     </div>
 </div>

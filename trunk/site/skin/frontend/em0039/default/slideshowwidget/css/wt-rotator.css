@@ -83,6 +83,13 @@ left:0;
     margin-top: 40px;
     width: 359px !important;
 }
+.wt-rotator .inner-text .style h4{
+    left:990px;
+    margin-top: 10px;
+	color: #3D2817;
+    position: absolute;
+    width: 359px !important;
+}
 .wt-rotator .inner-text .style p span{
     clear: both;
     color: #3d2817;

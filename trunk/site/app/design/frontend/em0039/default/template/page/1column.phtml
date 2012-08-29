@@ -48,8 +48,8 @@
         
         <div class="main-container col1-layout">
             <div class="main">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
                 <div class="col-main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
                     <?php echo $this->getChildHtml('global_messages') ?>
 					<?php echo $this->getChildHtml('em0039_home_most_popular') ?>
 						<?php echo $this->getChildHtml('em0039_fresh') ?>
@@ -58,16 +58,17 @@
                 </div>
             </div>
         </div>
-		<?php echo $this->getChildHtml('blog_recent'); ?>
-        <?php echo $this->getChildHtml('em0039_footer_news'); ?>
+		<div class="footer-news"><?php echo $this->getChildHtml('blog_recent'); ?></div>
+        <?php // echo $this->getChildHtml('em0039_footer_news'); ?>
         <div class="footer-main-container">
-			<div class="footer-container-main">
-            <div class="footer-newsletter-picture">
-                <?php echo $this->getChildHtml('left.newsletter'); ?>
-                <?php echo $this->getChildHtml('em0039_footer_picture'); ?>
-            </div>
-            <?php echo $this->getChildHtml('footer-main-container') ?>
-			</div>
+			<div class="footer-image"><?php echo $this->getChildHtml('em0039_image_footer'); ?></div>
+			<div class="footer-container-main"><div class="footer-content">
+				<div class="footer-newsletter-picture">
+					<?php echo $this->getChildHtml('left.newsletter'); ?>
+					<?php echo $this->getChildHtml('em0039_footer_picture'); ?>
+				</div>
+				<?php echo $this->getChildHtml('footer-main-container') ?>
+			</div></div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>
 

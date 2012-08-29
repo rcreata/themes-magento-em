@@ -149,13 +149,13 @@
                 <crosssell_width>75</crosssell_width>
 				<crosssell_height>75</crosssell_height>
                 <crosssell_bgcolor>#FFF</crosssell_bgcolor>
-				<upsell_width>125</upsell_width>
-                <upsell_height>125</upsell_height>
+				<upsell_width>165</upsell_width>
+                <upsell_height>160</upsell_height>
 				<upsell_bgcolor>#FFF</upsell_bgcolor>
-                <widget_width>165</widget_width>
+                <widget_width>155</widget_width>
 				<widget_height>150</widget_height>
                 <widget_bgcolor>#FFF</widget_bgcolor>
-                <mostpopular_width>185</mostpopular_width>
+                <mostpopular_width>175</mostpopular_width>
                 <mostpopular_height>150</mostpopular_height>
                 <mostpopular_bgcolor>#FFF</mostpopular_bgcolor>
 				<tab_width>85</tab_width>

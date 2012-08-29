@@ -24,6 +24,41 @@ String.prototype.namespace = function(separator) {
 
 // EM0008 {{{
 
+function menu()
+{
+	var Width_ul=960;
+	var Width_li=0;
+	var Width_before=0;
+	var Width_div=0;
+	var Width=0;
+	
+	$$("#nav").each(function(elem) {
+	elem.childElements().each(function(li) {
+		li.addClassName('submenu');
+	});
+		
+	});
+	
+	
+    $$(".menu").each(function(elem) {
+		elem.childElements().each(function(li) {
+			li.addClassName('submenu');
+            Width_li=li.getWidth();
+			Width=Width_ul-Width_before;
+			Width_before+=Width_li;
+			$div=li.select('div')[0];
+			if(typeof $div != 'undefined'){
+				Width_div=$div.getWidth();
+				sub=Width_div-Width;
+				if(sub>0){
+					$div.addClassName(' position-right')
+					li.addClassName('position-right-li')
+				}
+			}
+        });
+		
+	});
+}
 
 function decorateSlideshow_moreview() {
 	var $$li = $$('#slideshow_moreviews ul li');
@@ -116,6 +151,7 @@ Event.observe(window, 'load', function() {
 });
 
 document.observe("dom:loaded", function() {
+	menu();
 });
 
 // }}}

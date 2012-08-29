@@ -52,8 +52,8 @@ Default layout, loads most of the pages
 		</reference>
         <reference name="root">			
 			<block type="blog/post_recent" name="blog_recent" before="" template="em_blog/post/recent_footer.phtml" />
-			<block type="cms/block" name="em0039_footer_news" before="">
-				<action method="setBlockId"><block_id>em0039_footer_news</block_id></action>
+			<block type="cms/block" name="em0039_image_footer" before="">
+				<action method="setBlockId"><block_id>em0039_image_footer</block_id></action>
 			</block>
 			<block type="cms/block" name="em0039_footer_picture" after="left.newsletter">
 				<action method="setBlockId"><block_id>em0039_footer_picture</block_id></action>

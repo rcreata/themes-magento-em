@@ -33,7 +33,7 @@
 
 /* Widget: Catalog New Proructs List */
 .widget-new-products { display:block; }
-.col-main .widget-new-products { margin:7px 0; }
+/*.col-main .widget-new-products { margin:7px 0; }*/
 .widget-new-products .products-grid .product-image,
 .widget-new-products .products-list .product-image { width:160px; height:160px; }
 .widget-new-products .products-list .product-shop { margin-left:170px; }

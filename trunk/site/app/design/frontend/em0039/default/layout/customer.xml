@@ -88,6 +88,17 @@ Layout for customer login page
         <remove name="right"/>
         <remove name="left"/>
 
+		<reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
+            </action>
+           
+            <action method="addCrumb">
+                <crumbName>login</crumbName>
+                <crumbInfo><label>Login</label><title>Login</title></crumbInfo>
+            </action>
+        </reference>	
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
@@ -244,6 +255,16 @@ Customer account pages, rendered for all tabs in dashboard
             <remove name="tags_popular"/>
 
         </reference>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>customer</crumbName>
+                <crumbInfo><label>Account</label><title>Account</title></crumbInfo>
+            </action>
+        </reference>
     </customer_account>
 
 <!--
@@ -267,6 +288,17 @@ Customer account home dashboard layout
             </block>
         </reference>
 
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>customer</crumbName>
+                <crumbInfo><label>Account</label><title>Account</title></crumbInfo>
+            </action>
+        </reference>
+
     </customer_account_index>
 
 <!--
@@ -280,6 +312,16 @@ Customer account address book
         <reference name="my.account.wrapper">
             <block type="customer/address_book" name="address_book" template="customer/address/book.phtml"/>
         </reference>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>customer</crumbName>
+                <crumbInfo><label>Account</label><title>Account</title></crumbInfo>
+            </action>
+        </reference>
     </customer_address_index>
 
 <!--
@@ -292,6 +334,16 @@ Customer account address edit page
         <update handle="customer_account"/>
         <reference name="my.account.wrapper">
             <block type="customer/address_edit" name="customer_address_edit" template="customer/address/edit.phtml"/>
+        </reference>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <crumbName>home</crumbName>
+                <crumbInfo><label>Home</label><title>Home</title></crumbInfo>
+            </action>
+            <action method="addCrumb">
+                <crumbName>customer</crumbName>
+                <crumbInfo><label>Account</label><title>Account</title></crumbInfo>
+            </action>
         </reference>
     </customer_address_form>
 
