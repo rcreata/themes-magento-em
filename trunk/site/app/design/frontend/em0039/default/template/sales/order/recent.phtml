@@ -72,5 +72,5 @@
     <p><?php echo $this->__('You have placed no orders.'); ?></p>
 <?php endif; ?>
 	
-        <?php if( sizeof($_orders->getItems()) > 0 ): ?><a href="<?php echo $this->getUrl('sales/order/history') ?>"><?php echo $this->__('View All') ?></a><?php endif; ?>
+        <?php if( sizeof($_orders->getItems()) > 0 ): ?><span class="view_all"><a href="<?php echo $this->getUrl('sales/order/history') ?>"><?php echo $this->__('View All') ?></a></span><?php endif; ?>
 </div>

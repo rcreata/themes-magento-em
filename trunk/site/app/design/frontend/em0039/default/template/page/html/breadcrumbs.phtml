@@ -28,6 +28,9 @@
 <div class="breadcrumbs">
     <ul>
         <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
+			<?php if($_crumbName == 'home'):?>
+				<?php $_crumbInfo['link'] = Mage::getBaseUrl(); ?>
+			<?php endif;?>
             <li class="<?php echo $_crumbName ?>">
             <?php if($_crumbInfo['link']): ?>
                 <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></a>
@@ -37,7 +40,7 @@
                 <?php echo $this->htmlEscape($_crumbInfo['label']) ?>
             <?php endif; ?>
             <?php if(!$_crumbInfo['last']): ?>
-                <span>/ </span>
+                <span><small>>><small> </span>
             <?php endif; ?>
             </li>
         <?php endforeach; ?>

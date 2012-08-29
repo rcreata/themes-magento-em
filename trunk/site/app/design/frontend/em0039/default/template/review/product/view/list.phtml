@@ -66,7 +66,7 @@
                     </tbody>
                 </table>
                 <?php endif; ?>
-                <?php echo nl2br($this->htmlEscape($_review->getDetail())) ?>
+                <?php echo nl2br($this->htmlEscape($_review->getDetail())) ?></br>
                 <!--small class="date"><?php echo $this->__('(Posted on %s)', $this->formatDate($_review->getCreatedAt()), 'long') ?></small-->
 				<small class="date"><?php echo $this->__('Review by <span>%s</span>', $this->htmlEscape($_review->getNickname())) ?></small>
 				

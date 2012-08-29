@@ -77,8 +77,6 @@
                 <div class="add-to-box">
                     <?php if($_product->isSaleable()): ?>
                         <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                        <?php endif; ?>
                     <?php endif; ?>
                     <?php echo $this->getChildHtml('addto') ?>
                 </div>
@@ -163,7 +161,6 @@
             <?php echo $html; ?>
         </div>
 <?php endforeach;?>
-        <?php // echo $this->getChildHtml('product_additional_data') ?>
         <?php echo $this->getChildHtml('product_additional_data_review');?>
         <?php echo $this->getChildHtml('upsell_products') ?>
 
